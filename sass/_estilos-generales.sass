@@ -1,0 +1,283 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+.flex-juego
+    @extend %flex
+
+.lista
+    @extend %navegacion-flex
+    margin: 0
+
+.lista-contenida
+    list-style: none
+    padding: 0 10px
+
+.link
+    text-decoration: none
+    font-family: 'Oswald', sans-serif
+    color: $color-negroClaro
+    font-size: 20px
+
+.link:hover
+   color: $color-fondoSecundario
+
+.fondo-encabezado
+    background-color: $color-fondoPrincipal
+    height: 70px
+
+.fondo-principal
+    background-image: url('/recursos/img/fondo/fondo1.jpg')
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    height: 700px
+
+.fondo
+    background-color: $color-fondoCuarto
+    border-radius: 5px
+
+.fondo-juego
+    background-color: $color-fondoPrincipal
+    padding: 15vh 0 15vh 0
+
+.fondo-footer
+    background-color: $color-fondoSecundario
+
+.fondo-imagen
+    background-color: $color-fondoCuarto
+    border-radius: 10px
+
+.encabezado
+    background-color: $color-fondoSecundario
+    border-radius: 5px 5px 0 0
+
+.contenido-inicio h1
+    @extend %titulo
+    color: $color-blanco
+
+.contenido-inicio p
+    @extend %texto
+    color: $color-blanco
+
+.contenido__h2--titulo
+    @extend %subtitulo
+    color: $color-negroClaro
+
+.contenido h1
+     @extend %titulo
+     color: $color-blanco
+
+.contenido h2
+    @extend %subtitulo
+    color: $color-blanco
+
+.contenido h3
+    @extend %tercer-titulo
+    color: $color-negro
+
+.contenido p
+    @extend %texto
+    color: $color-blanco
+
+.contenido button 
+    font-size: 18px
+    background-color: $color-fondoSecundario
+    color: $color-blanco
+    border: 1px solid $color-fondoCuarto
+    border-radius: 4px
+    line-height: 30px
+    padding: 5px 15px
+    margin: 5px
+
+.contenido__p--subtitulo
+    color: $color-blanco
+
+.contenido__a--inicio
+    text-decoration: none
+    font-size: 20px
+    background-color: $color-fondoPrincipal
+    color: $color-negro
+    border: 1px solid $color-fondoCuarto
+    border-radius: 4px
+    line-height: 30px
+    padding: 5px 15px
+
+.contenido__a--inicio:hover
+    color: $color-negro
+    background-color: $color-fondoCuarto
+
+.contenido button:hover 
+    background-color: $color-fondoTercero
+
+.contenido-footer
+    @extend %texto
+    color: $color-fondoPrincipal
+    font-size: 18px
+
+.modal-contenedor
+    display: flex
+    align-items: center
+    justify-content: center
+    position: fixed
+    pointer-events: none
+    opacity: 0
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100vw
+    transition: opacity 0.3s
+
+.modal-contenedor.mostrar
+    pointer-events: auto
+    opacity: 1
+
+.contenido-modal p
+    color: $color-negro
+    
+.ventana
+    background-color: $color-blanco
+    box-shadow: 0 2px 4px $color-sombras
+    border-radius: 5px
+    padding: 30px 50px
+    width: 600px
+    max-width: 100%
+    text-align: center
+
+.ventana h1
+   margin: 0
+
+.ventana p
+    opacity: 0.7
+
+.img-ahorcado
+    height: 200px
+    width: 200px
+    margin: 2%
+    padding: 1%
+
+.boton-menu
+    font-size: 25px
+    color: $color-fondoSecundario
+    cursor: pointer
+    display: none
+    border: 1px solid $color-fondoSecundario
+    border-radius: 4px
+    line-height: 0.5
+    padding: 5px
+    margin: 5px
+
+ul.mostrar
+    top: 55px
+
+@media (max-width: 853px)
+    .menu
+        height: 55px
+
+    .link
+        font-size: 15px
+
+    .boton-menu
+        display: inline-flex
+
+    .lista
+        position: fixed
+        width: 100vw
+        height: calc(20% - 55px)
+        background: $color-fondoPrincipal
+        top: -100vh
+        text-align: center
+        transition: top 0.4s
+        justify-content: start
+        align-items: start
+        flex-direction: column
+        border-radius: 5px
+
+@media (max-width: 853px) and (orientation: landscape)
+    .lista-contenida
+        margin: 5px 0 0 0
+
+    .lista
+        overflow: scroll
+        height: calc(40% - 55px)
+
+@media (max-width: 850px)
+    .fondo-juego
+        padding: 10vh 0 10vh 0
+
+    .contenido__a--inicio
+        font-size: 20px
+    
+    .contenido-inicio h1
+        font-size: 50px
+
+    .contenido-inicio p
+        font-size: 25px
+
+    .contenido__h2--titulo
+        font-size: 25px
+
+    .contenido h2
+        font-size: 30px
+
+    .contenido h3
+        font-size: 25px
+    
+    .contenido p
+        font-size: 20px
+        
+    .contenido button
+        font-size: 20px
+        padding: 4px 8px
+
+    .img-ahorcado
+        height: 150px
+        width: 150px
+
+    .contenido-footer h2
+        font-size: 25px
+
+    .contenido-footer p
+        font-size: 20px
+
+@media (max-width: 720px)
+    .contenido__a--inicio
+        font-size: 15px
+
+    .fondo-principal
+        background-size: cover
+
+    .contenido-inicio h1
+        font-size: 40px
+
+    .contenido-inicio p
+        font-size: 20px
+
+    .contenido__h2--titulo
+        font-size: 20px
+
+    .contenido h2
+        font-size: 25px
+
+    .contenido h3
+        font-size: 20px
+
+    .contenido p
+        font-size: 15px
+        
+    .contenido button
+        font-size: 15px
+        padding: 1px 5px
+
+    .img-ahorcado
+        height: 80px
+        width: 80px
+    
+    .fondo-principal
+        height: 500px
+
+    .contenido-footer h2
+        font-size: 18px
+
+    .contenido-footer p
+        font-size: 15px
